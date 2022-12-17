@@ -1,3 +1,4 @@
+import { Content } from './content';
 import { INotification } from './interfaces/INotification';
 
 export class Notification {
@@ -15,11 +16,11 @@ export class Notification {
     return this.props.recipientId;
   }
 
-  public set content(content: string) {
+  public set content(content: Content) {
     this.props.content = content;
   }
 
-  public get content(): string {
+  public get content(): Content {
     return this.props.content;
   }
 
