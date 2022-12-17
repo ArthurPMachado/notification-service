@@ -1,4 +1,4 @@
-import { Replace } from '../helpers/Replace';
+import { Replace } from '../../helpers/Replace';
 import { Content } from './content';
 import { INotification } from './interfaces/INotification';
 
