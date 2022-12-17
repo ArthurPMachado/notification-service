@@ -1,11 +1,15 @@
+import { Replace } from '../helpers/Replace';
 import { Content } from './content';
 import { INotification } from './interfaces/INotification';
 
 export class Notification {
   private props: INotification;
 
-  constructor(props: INotification) {
-    this.props = props;
+  constructor(props: Replace<INotification, { createdAt?: Date }>) {
+    this.props = {
+      ...props,
+      createdAt: props.createdAt ?? new Date(),
+    };
   }
 
   public set recipientId(recipientId: string) {
