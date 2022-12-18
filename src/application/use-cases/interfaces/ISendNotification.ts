@@ -1,4 +1,4 @@
-import { Notification } from 'src/application/entities/Notification';
+import { Notification } from '@application/entities/Notification';
 
 export interface ISendNotificationRequest {
   recipientId: string;
