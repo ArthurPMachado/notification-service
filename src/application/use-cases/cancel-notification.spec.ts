@@ -5,14 +5,14 @@ import { Notification } from '@application/entities/Notification';
 import { Content } from '@application/entities/content';
 
 describe('Cancel notification', () => {
-  it('should be able to send a notification', async () => {
+  it('should be able to cancel a notification', async () => {
     const notificationsRepository = new InMemoryNotificationsRepository();
     const cancelNotification = new CancelNotification(notificationsRepository);
 
     const notification = new Notification({
       category: 'social',
       content: new Content('Nova solicitação de amizade'),
-      recipientId: 'excample-recipient-id',
+      recipientId: 'example-recipient-id',
     });
 
     await notificationsRepository.create(notification);
