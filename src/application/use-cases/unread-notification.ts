@@ -7,7 +7,7 @@ import {
 } from './interfaces/IReadNotification';
 
 @Injectable()
-export class ReadNotification {
+export class UnreadNotification {
   constructor(private notificationsRepository: NotificationsRepository) {}
 
   async execute(
@@ -23,7 +23,7 @@ export class ReadNotification {
       throw new NotificationNotFound();
     }
 
-    notification.read();
+    notification.unread();
 
     await this.notificationsRepository.save(notification);
   }

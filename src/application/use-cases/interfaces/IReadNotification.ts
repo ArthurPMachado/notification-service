@@ -1,5 +1,5 @@
-export interface IReadNotificationRequest {
+export interface IReadOrUnreadNotificationRequest {
   notificationId: string;
 }
 
-export type ReadNotificationResponse = void;
+export type ReadOrUnreadNotificationResponse = void;
