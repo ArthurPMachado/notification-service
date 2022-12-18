@@ -24,5 +24,7 @@ export class CancelNotification {
     }
 
     notification.cancel();
+
+    await this.notificationsRepository.save(notification);
   }
 }
